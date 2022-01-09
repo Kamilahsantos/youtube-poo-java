@@ -1,31 +1,32 @@
 public class Developer {
 
-    String name;
-    String stack;
-    String country;
-
-
-    public Developer(String name, String stack, String country) {
-        this.name = name;
-        this.stack = stack;
-        this.country = country;
+    public String getStackOfDeveloper(String stack) {
+        return stack;
     }
 
 
-    @Override
-    public String toString() {
-        return "ola meu nome é \n " + name + "\n trabalho com a stack " + stack
-                + "\n e sou do " + country;
+    public String getNameOfDeveloper(String name) {
+        return name;
     }
-    
-    public static  void main (String [] args) {
-        Developer KamilaCode = new Developer("kamila code", "java", "brasil");
+
+    public String getCountryOfDeveloper(String country) {
+        return country;
+    }
+
+    public static void main(String[] args) {
+
+        Developer kamilacode = new Developer();
 
 
-        Developer newDev = new Developer("seu nome", "sua stack", "seu pais");
+        String minhaStack = kamilacode.getStackOfDeveloper("java e spring");
+        String meuPais = kamilacode.getCountryOfDeveloper("brazil");
+        String meuNome = kamilacode.getNameOfDeveloper("name");
 
-        System.out.println(KamilaCode);
-        System.out.println(newDev);
+
+        System.out.println(minhaStack);
+        System.out.println(meuPais);
+        System.out.println(meuNome);
+
 
     }
 }
